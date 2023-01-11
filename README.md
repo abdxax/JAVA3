@@ -198,21 +198,20 @@
         System.out.println("Q10");
         int [] a1={2,3,6,6,4};
         int [] a2={2,3,6,6,4};
-        int sum1=0;
-        int sum2=0;
-        for(int i1:a1){
-            sum1+=i1;
-        }
-        for(int i2:a2){
-            sum2+=i2;
-        }
-        if(sum1==sum2){
-     System.out.println(true);
+        boolean isEqual=true;
+
+        if(a1.length==a2.length){
+            for(int i=0;i<a1.length;i++){
+                if(a1[i]!=a2[i]){
+                    isEqual=false;
+                    break;
+                }
+            }
         }
         else{
-            System.out.println(false);
+            isEqual=false;
         }
 
 
-
+System.out.println(isEqual);
     }
