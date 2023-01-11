@@ -113,14 +113,14 @@
                            isFound=true;
 
                        }
-                       if(isFound){
-                           System.out.println(word+" is found");
-                       }
-                       else{
-                           System.out.println(word+" is not found");
-                       }
 
                    }
+                    if(isFound){
+                        System.out.println(word+" is found");
+                    }
+                    else{
+                        System.out.println(word+" is not found");
+                    }
                     break;
                 case "d":
                 case "D":
@@ -139,6 +139,9 @@
         //8. Write a program thats displays the number of occurrences of an element in the array.
         System.out.println("Q8");
         int [] aar8={1,1,1,3,3,5};
+        System.out.println("Enter the number");
+        int nu=s.nextInt();
+        int occItem=0;
         ArrayList<Integer> elemnt=new ArrayList<>();
         ArrayList<Integer> Item=new ArrayList<>();
         int [] occ=new int[aar8.length];
@@ -154,6 +157,12 @@
                 elemnt.add(aar8[i]);
                 Item.add(count);
             }
+            if(nu==aar8[i]){
+                occItem++;
+               // elemnt.add(nu);
+
+            }
+
             occ[i]=count;
 
         }
@@ -161,6 +170,7 @@
         for(int i=0;i<elemnt.size();i++){
             System.out.println(elemnt.get(i)+" occurs "+ Item.get(i) +" times");
         }
+        System.out.println("The User Enter is \n"+nu+" occurs "+ occItem +" times");
 
         //9. Write a program that places the odd elements of an array before the even elements.
         System.out.println("Q9");
