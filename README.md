@@ -80,37 +80,47 @@
         boolean isRun=true;
         System.out.println("Please Enter the Size Array");
         int sizeArray=s.nextInt();
-        int [] elmn=new int[sizeArray];
+        String [] elmn=new String[sizeArray];
         while (isRun){
+
+            System.out.println("a. Accept elements of an array b. Display elements of an array c. Search the element within array d. Sort the array if want exit enter any key");
             s.nextLine();
-            System.out.println("a. Accept elements of an array b. Display elements of an array c. Search the element within array d. Sort the array the size of the array should be entered by the user.");
             String opt=s.nextLine();
+
 
             switch (opt){
                 case "a":
                 case "A":
                     for(int i=0;i<elmn.length;i++){
                         System.out.println("Enter item number");
-                        int ite=s.nextInt();
+                        String ite=s.nextLine();
                         elmn[i]=ite;
                     }
                     break;
                 case "b":
                 case "B":
-                    for( int i : elmn){
+                    for( String i : elmn){
                         System.out.println(i);
                     }
                     break;
                 case "c":
                 case "C":
-                    System.out.println("Please Enter the Index");
-                    int index=s.nextInt();
-                    if(index>elmn.length){
-                        System.out.println("the index out of array");
-                    }
-                    else{
-                        System.out.println("The elemant is "+elmn[index]);
-                    }
+                    System.out.println("Please Enter the Item want to search");
+                    String word=s.nextLine();
+                    boolean isFound=false;
+                   for(String i :elmn){
+                       if(i.equalsIgnoreCase(word)){
+                           isFound=true;
+
+                       }
+                       if(isFound){
+                           System.out.println(word+" is found");
+                       }
+                       else{
+                           System.out.println(word+" is not found");
+                       }
+
+                   }
                     break;
                 case "d":
                 case "D":
